@@ -1,0 +1,19 @@
+inherit distutils
+
+vv=42521
+
+DESCRIPTION="CVS to SVN repository converter"
+HOMEPAGE="http://cvs2svn.tigris.org/"
+SRC_URI="http://cvs2svn.tigris.org/files/documents/1462/${vv}/${P}.tar.gz"
+
+src_test() {
+	cd ${B}
+	export LC_ALL=C
+	${PYTHON} run-tests.py
+}
+
+src_install() {
+	cd ${B}
+	distutils_install
+	doman cvs2svn.1
+}
