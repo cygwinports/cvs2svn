@@ -1,6 +1,6 @@
 inherit distutils
 
-vv=42521
+vv=46528
 
 DESCRIPTION="CVS to SVN repository converter"
 HOMEPAGE="http://cvs2svn.tigris.org/"
@@ -15,5 +15,5 @@ src_test() {
 src_install() {
 	cd ${B}
 	distutils_install
-	doman cvs2svn.1
+#	doman cvs2svn.1
 }
