@@ -1,6 +1,0 @@
-category: Devel
-requires: python subversion
-sdesc: "CVS to Subversion repository converter"
-ldesc: "cvs2svn is a tool for migrating a CVS repository to Subversion 
-or git. The main design goals are robustness and 100% data preservation. 
-cvs2svn can convert just about any CVS repository."

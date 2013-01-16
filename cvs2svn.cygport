@@ -1,0 +1,24 @@
+inherit distutils
+
+vv=49237
+
+NAME="cvs2svn"
+VERSION=2.4.0
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="CVS to Subversion/Bazaar/Git repository converter"
+DESCRIPTION="cvs2svn is a tool for migrating a CVS repository to Subversion,
+Bazaar, or Git. The main design goals are robustness and 100% data preservation.
+cvs2svn can convert just about any CVS repository."
+HOMEPAGE="http://cvs2svn.tigris.org/"
+SRC_URI="http://cvs2svn.tigris.org/files/documents/1462/${vv}/${P}.tar.gz"
+
+REQUIRES="bzr-fastimport git subversion"
+
+src_test() {
+	cd ${B}
+	export LC_ALL=C
+	${PYTHON} run-tests.py
+}
+
+DOCS="*-example.options"
