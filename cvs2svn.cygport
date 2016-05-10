@@ -13,6 +13,8 @@ cvs2svn can convert just about any CVS repository."
 HOMEPAGE="http://cvs2svn.tigris.org/"
 SRC_URI="http://cvs2svn.tigris.org/files/documents/1462/${vv}/${P}.tar.gz"
 
+ARCH=noarch
+
 REQUIRES="bzr-fastimport git subversion"
 
 src_test() {
